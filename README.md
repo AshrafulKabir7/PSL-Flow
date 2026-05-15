@@ -4,6 +4,36 @@
 
 ---
 
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    User((Legal Expert)) -->|Upload Document| Frontend[Next.js Dashboard]
+    Frontend -->|POST /upload| Backend[FastAPI Backend]
+    
+    subgraph "Intelligence & Processing"
+        Backend -->|Vision OCR| Gemini[Gemini 2.5 Flash]
+        Gemini -->|Structured Extract| SQLite[(SQLite Metadata)]
+    end
+    
+    subgraph "Hybrid Retrieval (RAG)"
+        Backend -->|Vector Search| Chroma[(ChromaDB - Semantic)]
+        Backend -->|BM25 Ranker| Keyword[Keyword Index]
+    end
+    
+    subgraph "Grounded Drafting & Learning"
+        Backend -->|Inject Context| Drafter[Drafting Engine]
+        Drafter -->|Grounded Generation| Gemini
+        User -->|Refine Draft| Frontend
+        Frontend -->|Capture Edits| Learner[Pattern Learner]
+        Learner -->|Style Patterns| SQLite
+    end
+    
+    Gemini -->|Verified Output| User
+```
+
+---
+
 ## ✨ Key Features
 
 -   **Intelligent Document Ingestion**: Leverages multi-modal LLMs (Gemini Flash) to perform high-accuracy OCR on degraded scans, rotated pages, and handwritten legal notes.
@@ -14,7 +44,7 @@
 
 ---
 
-## 🏗️ Technical Architecture
+## 🛠️ Technical Implementation
 
 ### **Core Stack**
 -   **AI Infrastructure**: Powered by Google Gemini 2.5 Flash for multimodal reasoning and long-context analysis.
@@ -27,7 +57,7 @@ Unlike static RAG systems, CaseCraft includes a dedicated **Pattern Learner** th
 
 ---
 
-## 🛠️ Quick Start
+## 🚀 Quick Start
 
 ### **Backend Setup**
 1. Navigate to `backend/`
@@ -47,7 +77,7 @@ Unlike static RAG systems, CaseCraft includes a dedicated **Pattern Learner** th
 
 ---
 
-## 📐 Design Philosophy
+## ⚖️ Design Philosophy
 CaseCraft was built on the principle of **"Verification over Generation."** In the legal field, accuracy is non-negotiable. Our system prioritizes transparency by making every AI-generated sentence inspectable, ensuring that the technology assists the expert without sacrificing professional integrity.
 
 ---
