@@ -6,7 +6,7 @@
 
 ## ✨ Key Features
 
--   **Intelligent Document Ingestion**: Leverages multi-modal LLMs to perform high-accuracy OCR on degraded scans, rotated pages, and handwritten legal notes.
+-   **Intelligent Document Ingestion**: Leverages multi-modal LLMs (Gemini Flash) to perform high-accuracy OCR on degraded scans, rotated pages, and handwritten legal notes.
 -   **Verifiable Grounding (RAG)**: Anchors every claim in your draft to source evidence. A simple click on a citation highlights the exact passage in the original document for instant verification.
 -   **Hybrid Retrieval Engine**: Combines semantic vector search (ChromaDB) with keyword-exact matching (BM25) to ensure critical legal terms and case numbers are never missed.
 -   **Active Learning Loop**: Learns your specific writing style and legal preferences. As you edit drafts, the system extracts patterns (e.g., phrasing, tone, structure) to make future generations more accurate.
@@ -17,7 +17,7 @@
 ## 🏗️ Technical Architecture
 
 ### **Core Stack**
--   **AI Infrastructure**: Built with Google Gemini 2.5 Flash for multimodal reasoning and long-context analysis.
+-   **AI Infrastructure**: Powered by Google Gemini 2.5 Flash for multimodal reasoning and long-context analysis.
 -   **Backend**: Python-based FastAPI service featuring a custom-built hybrid retrieval pipeline.
 -   **Database**: SQLite for metadata persistence and ChromaDB for high-performance vector retrieval.
 -   **Frontend**: A modern Next.js 14 application with a high-contrast design system and real-time state management.
@@ -41,6 +41,9 @@ Unlike static RAG systems, CaseCraft includes a dedicated **Pattern Learner** th
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 4. Visit `http://localhost:3000` to start drafting.
+
+> [!IMPORTANT]
+> **Note on API Usage**: The included API configurations are intended for **testing and demonstration purposes only**. Ensure you rotate keys or use environment-specific variables for any production-level deployment.
 
 ---
 
