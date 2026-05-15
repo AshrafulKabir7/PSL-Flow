@@ -23,12 +23,14 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="flex min-h-screen bg-[#F2F2F2]">
         <Providers>
           <Sidebar />
-          <main className="main-content">
-            {children}
-          </main>
+          <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+            <main className="flex-1 overflow-y-auto p-6">
+              {children}
+            </main>
+          </div>
         </Providers>
       </body>
     </html>
