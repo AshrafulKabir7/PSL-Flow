@@ -81,9 +81,3 @@ When an operator saves an edit, the `PatternLearner` compares `Draft V1` and `Dr
 -   **Tradeoff**: We use a local ChromaDB instance for simplicity/speed in this assessment. In a production environment, we would transition to a managed vector store (e.g., Pinecone or pgvector).
 -   **Choice**: We prioritized "Grounded Retrieval" over "Creative Writing" to ensure legal safety.
 
----
-
-## 👥 Submission Details
--   **Author**: Ashraful Kabir
--   **GitHub**: [AshrafulKabir7/PSL-Flow](https://github.com/AshrafulKabir7/PSL-Flow)
--   **Collaborators Invited**: @tsensei, @abubakarsiddik31
