@@ -1,6 +1,6 @@
-# PSL-Flow: Next-Generation Legal Intelligence & Drafting
+# CaseCraft: Next-Generation Legal Intelligence & Drafting
 
-**PSL-Flow** is a premium, AI-first platform designed to streamline the legal drafting lifecycle. It transforms fragmented, scanned, and handwritten legal documents into structured, grounded, and professionally formatted drafts with a built-in active learning loop.
+**CaseCraft** is a premium, AI-first platform designed to streamline the legal drafting lifecycle. It transforms fragmented, scanned, and handwritten legal documents into structured, grounded, and professionally formatted drafts with a built-in active learning loop.
 
 ---
 
@@ -23,7 +23,7 @@
 -   **Frontend**: A modern Next.js 14 application with a high-contrast design system and real-time state management.
 
 ### **The Active Learning Pipeline**
-Unlike static RAG systems, PSL-Flow includes a dedicated **Pattern Learner** that performs differential analysis between AI-generated drafts and human-perfected versions. This creates a continuously improving feedback loop, tailoring the AI's "voice" to match the user's professional style.
+Unlike static RAG systems, CaseCraft includes a dedicated **Pattern Learner** that performs differential analysis between AI-generated drafts and human-perfected versions. This creates a continuously improving feedback loop, tailoring the AI's "voice" to match the user's professional style.
 
 ---
 
@@ -45,7 +45,7 @@ Unlike static RAG systems, PSL-Flow includes a dedicated **Pattern Learner** tha
 ---
 
 ## 📐 Design Philosophy
-PSL-Flow was built on the principle of **"Verification over Generation."** In the legal field, accuracy is non-negotiable. Our system prioritizes transparency by making every AI-generated sentence inspectable, ensuring that the technology assists the expert without sacrificing professional integrity.
+CaseCraft was built on the principle of **"Verification over Generation."** In the legal field, accuracy is non-negotiable. Our system prioritizes transparency by making every AI-generated sentence inspectable, ensuring that the technology assists the expert without sacrificing professional integrity.
 
 ---
 

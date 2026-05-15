@@ -4,8 +4,8 @@ import { Sidebar } from '@/components/layout/Sidebar';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
-  title: 'PSL — Legal Intelligence',
-  description: 'Pearson Specter Litt — Legal Document AI Assistant',
+  title: 'CaseCraft — Intelligent Legal Drafting',
+  description: 'AI-powered legal document analysis and grounded drafting platform.',
 };
 
 export default function RootLayout({
